@@ -1,94 +1,133 @@
 <template>
-    <header class="sticky-header">
-        <div class="logo">
-            <img src="../assets/logo_signmaker.png" alt="Logo" />
+    <nav class="nav">
+        <div class="nav-left">
+            <img class="logo" src="../assets/logo_signmaker.png" alt="SignMaker">
         </div>
-        <nav class="menu">
-            <div class="dropdown">
-                <span class="dropbtn">PRODUCTS</span>
-                <div class="dropdown-content">
-                    <!-- Add your product links here -->
-                    <a href="#">Draw Signature</a>
-                    <a href="#">Type Signature</a>
-                    <a href="#">Logo Signature</a>
-                    <a href="#">Handwritten Signature</a>
-                </div>
-            </div>
-            <a href="#" class="blog-link">BLOG</a>
-        </nav>
-    </header>
+        <section class="nav-right">
+            <span class="nav-right-divider"></span>
+            <ul class="nav-right-list">
+                <li class="nav-right-item">
+                    <span class="nav-right-text">
+                        PRODUCTS
+                        <span class="arrow"></span>
+                    </span>
+                    <nav class="nav-right-dropdown">
+                        <li class="nav-right-dropdown-item">
+                            <a href="">
+                                Draw Signature
+                            </a>
+                        </li>
+                        <li class="nav-right-dropdown-item">
+                            <a href="">
+                                Type Signature
+                            </a>
+                        </li>
+                        <li class="nav-right-dropdown-item">
+                            <a href="">
+                                Logo Signature
+                            </a>
+                        </li>
+                         <li class="nav-right-dropdown-item">
+                            <a href="">
+                                Handwritten Signature
+                            </a>
+                        </li>
+                    </nav>
+                </li>
+                 <li class="nav-right-item">
+                    <span class="nav-right-text">
+                        BLOG
+                    </span>
+                </li>
+            </ul>
+        </section>
+    </nav>
 </template>
 
 <script setup>
-// Add any necessary script here
+
 </script>
 
 <style scoped>
-.sticky-header {
+.nav {  
     position: fixed;
-    top: 0;
     left: 0;
-    right: 0;
-    height: 40px;
-    padding-left: 40px;
-    display: flex;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
     z-index: 1000;
-}
-
-.logo img {
     height: 40px;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    display: flex;
+    padding: 0.5rem 2rem;
 }
-
-.menu {
+.nav-left {
     display: flex;
     align-items: center;
 }
-
-.dropdown {
-    position: relative;
-    display: inline-block;
+.nav .logo {
+    max-height: 40px;
 }
-
-.dropbtn {
-    display: inline-flex;
+.nav-right {
+    display: flex;
     align-items: center;
-    background-color: transparent;
-    color: black;
-    padding: 10px;
-    font-size: 12px;
+}
+.nav-right-divider {
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background-color: #000000;
+    margin: 0 1rem;
+}
+.nav-right-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+.nav-right-item {
+    height: 40px;
+    position: relative;
+}
+.nav-right-text {
+    margin: 0 10px;
+    color: #000000;
     cursor: pointer;
+    font-size: 0.75em;
+    display: block;
+    line-height: inherit;
+    height: 100%;
 }
-
-.dropdown-content {
+.nav-right-text .arrow {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top:  3px solid #000000;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    margin-bottom:2px;
+}
+.nav-right-dropdown {
     display: none;
+    flex-direction: column;
+    z-index: 10000;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
 }
-
-.dropdown-content a {
-    color: black;
-    padding: 6px 10px;
+.nav-right-item:hover .nav-right-dropdown {
+    display: flex;
+}
+.nav-right-dropdown-item a{
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 0.75em;
     text-decoration: none;
-    display: block;
-    font-size: 12px;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
+    color: rgba(117, 117, 117, 0.8);
+    white-space: nowrap;
     display: block;
 }
-
-.blog-link {
-    text-decoration: none;
-    color: black;
-    font-size: 12px;
+.nav-right-dropdown-item a:hover{
+    background-color: #f5f5f5;
 }
+
 </style>
