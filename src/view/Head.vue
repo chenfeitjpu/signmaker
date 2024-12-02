@@ -45,27 +45,26 @@
 </template>
 
 <script setup>
-
 </script>
 
 <style scoped>
-.nav {  
+.nav {
     position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 1000;
-    height: 40px;
+    top: 0px;
+    height: 60px;
     background-color: #ffffff;
-    border-color: #ffffff;
+    box-shadow: 0 10px 10px -6px rgba(170,170,170,0.5);
+    padding: 0 2rem;
     display: flex;
-    padding: 0.5rem 2rem;
+    width: 100%;
+    z-index: 1;
 }
 .nav-left {
     display: flex;
     align-items: center;
 }
-.nav .logo {
-    max-height: 40px;
+.nav-left .logo {
+    max-height: 60px;
 }
 .nav-right {
     display: flex;
@@ -82,22 +81,18 @@
     list-style: none;
     display: flex;
     align-items: center;
-    height: 40px;
-    line-height: 40px;
+    height: 60px;
+    line-height: 60px;
     position: relative;
 }
 .nav-right-item {
-    height: 40px;
+    height: 60px;
     position: relative;
 }
 .nav-right-text {
     margin: 0 10px;
-    color: #000000;
     cursor: pointer;
     font-size: 0.75em;
-    display: block;
-    line-height: inherit;
-    height: 100%;
 }
 .nav-right-text .arrow {
     display: inline-block;
@@ -113,13 +108,14 @@
     flex-direction: column;
     z-index: 10000;
     position: absolute;
+    background-color: #ffffff;
 }
 .nav-right-item:hover .nav-right-dropdown {
     display: flex;
 }
 .nav-right-dropdown-item a{
     line-height: 40px;
-    padding-left: 10px;
+    padding: 0 10px;
     font-size: 0.75em;
     text-decoration: none;
     color: rgba(117, 117, 117, 0.8);

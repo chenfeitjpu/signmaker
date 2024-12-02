@@ -1,28 +1,31 @@
 <template>
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="../assets/logo_signmaker.png" alt="Logo" />
+        <div class="footer-container">
+            <div class="footer-left">
+                <img class="logo" src="../assets/logo_signmaker.png" alt="logo" />
             </div>
-            <div class="footer-info">
-                <div class="footer-products">
-                    <h3>Products</h3>
-                    <ul>
-                        <li><a href="#">Draw Signature</a></li>
-                        <li><a href="#">Type Signature</a></li>
-                        <li><a href="#">Logo Signature</a></li>
-                        <li><a href="#">Handwritten Signature</a></li>
-                    </ul>
+            <div class="footer-right">
+                <div class="footer-right-item">
+                    <span class="footer-right-item-title">Products</span>
+                    <div class="footer-right-item-content">
+                        <a href="">Draw Signature</a>
+                        <a href="">Type Signature</a>
+                        <a href="">Logo Signature</a>
+                        <a href="">Handwritten Signature</a>
+                    </div>
                 </div>
-                <div class="footer-about">
-                    <h3>About</h3>
-                    <ul>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
+                <div class="footer-right-item">
+                    <span class="footer-right-item-title">Contact Us</span>
+                    <div class="footer-right-item-content">
+                        <a href="">Blog</a>
+                        <a href="">Pricing</a>
+                        <a href="">FAQ</a>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="site-statement">
+            <p>Copyright 2024 SignMaker. All rights reserved. </p>
         </div>
     </footer>
 </template>
@@ -33,69 +36,44 @@
 
 <style scoped>
 .footer {
-    background-color: #fafafa;
+    border-top: 1px solid #f1f2f3;
     padding: 20px 0;
+}
+.footer-container {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
+    margin-bottom: 40px;
 }
-
-.footer-content {
+.footer-left {
+    margin-left: 100px;
+    width: 200px;
+}
+.footer-left .logo {
+    max-height: 100px;
+    max-width: 100%;
+}
+.footer-right {
     display: flex;
-    justify-content: space-around; /* Distribute space between items */
-    align-items: flex-start; /* Align items to the top */
-    width: 80%; /* Adjust width as needed */
-    gap: 20px; /* Add gap between modules */
+    justify-content: space-between;
+    padding: 0 50px;
 }
-
-.footer-logo {
-    flex: 1; /* Smaller width for the logo */
-    display: flex;
-    align-items: flex-start; /* Align content to the top */
+.footer-right-item {
+    padding: 0 20px;
 }
-
-.footer-logo img {
-    height: 60px;
-     background-color: #fafafa;
+.footer-right-item-title {
+    display: block;
+    margin-bottom: 15px;
 }
-
-.footer-info {
-    flex: 3; /* Container for products and about */
-    display: flex;
-    justify-content: flex-start; /* Align items to the start */
-    gap: 10px; /* Reduce gap between products and about */
-}
-
-.footer-products {
-    display: flex;
-    flex-direction: column; /* Display items vertically */
-    align-items: flex-start; /* Align content to the top */
-    margin-right: 40px; /* Add margin to the right of products */
-}
-
-.footer-about {
+.footer-right-item-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
-
-.footer-products h3, .footer-about h3 {
-    margin-bottom: 10px;
-    font-size: 14px; /* Smaller font size for headings */
-}
-
-.footer-products ul, .footer-about ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-products li, .footer-about li {
-    margin-bottom: 5px;
-    font-size: 12px; /* Smaller font size for list items */
-}
-
-.footer-products a, .footer-about a {
+.footer-right-item a {
+    color: #777777;
     text-decoration: none;
-    color: black;
-    font-size: 12px; /* Smaller font size for links */
+}
+.site-statement {
+    border-top: 1px solid rgba(117, 117, 117, 0.09);
+    text-align: center;
+    padding-top: 20px;
 }
 </style>
