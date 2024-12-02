@@ -18,11 +18,13 @@
 import { ref } from 'vue';
 
 const faqs = ref([
-    { question: 'What is Text to Music?', answer: 'Text to Music is a technology that converts written text into musical compositions using AI. With Remusic, you can easily turn your words into unique melodies.', visible: false },
-    { question: 'How does the AI Text to Music Generator work?', answer: 'The AI analyzes your text, identifying patterns and emotions, and then generates a corresponding musical piece. Simply input your text, and let the AI create music for you.', visible: false },
-    { question: 'Is the Text to Music tool free?', answer: "Yes, Remusic's Text to Music tool is completely free to use, offering all features without any cost.", visible: false },
-    { question: 'What is Text to Music?', answer: 'Text to Music is a technology that converts written text into musical compositions using AI. With Remusic, you can easily turn your words into unique melodies.', visible: false },
-    { question: 'How does the AI Text to Music Generator work?', answer: 'The AI analyzes your text, identifying patterns and emotions, and then generates a corresponding musical piece. Simply input your text, and let the AI create music for you.', visible: false }, 
+    { question: 'How do I use this AI Handwritten Signature Generator?', answer: 'AI Handwritten Signature Generator is an online tool where you can create and download the handwriting image and use it freely anywhere.', visible: false },
+    { question: 'Is this AI Handwritten Signature Generator free?', answer: 'Yes, you can use this AI Handwritten Signature Generator online for free.', visible: false },
+    { question: 'Where can I use my handwritten signature?', answer: 'You can use the handwritten signature without any prior permission. You are free to incorporate these images in various ways, including email signatures, email marketing campaigns, websites, and PDFs.', visible: false},
+    { question: "Can I change my handwritten signature once it's created?", answer: 'You can continue to modify the text or download the image to your local computer. Currently, our AI Handwritten Signature Generator does not support online modification.', visible: false},
+    { question: 'Can I share my handwritten signature?', answer: 'Yes, our AI Handwritten Signature Generator allows you to copy your generated signature to the clipboard or download it as an PNG file, making it easy to share or use across multiple platforms and documents.', visible: false},
+    { question: 'Can I download my generated handwritten signature?', answer: 'Yes, once your handwritten signature is created, you can easily download it in various formats.', visible: false},
+    { question: 'How does ai handwritten signature generator work?', answer: 'It uses AI to analyze handwriting styles and produce digital signatures that mimic authentic handwriting based on user input.', visible: false},
 ]);
 
 function toggleAnswer(index) {
@@ -33,16 +35,17 @@ function toggleAnswer(index) {
 <style scoped>
 .faqs {
     background-color: #e6f1ff;
-    padding: 40px 20px;
+    padding: 30px 20px;
 }
 .faqs-container {
-    max-width: 720px;
+    width: 100%;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0 15px;
 }
 .faqs-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .faq-list {
     flex-direction: column;
@@ -58,12 +61,13 @@ function toggleAnswer(index) {
     line-height: 60px;
     background-color: #f9fafb;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 40;
     padding: 0 15px;
     cursor: pointer;
 }
 .faq-answer {
-    padding: 0 15px;
+    font-size: 16px;
+    padding: 15px;
     word-wrap: break-word;
 }
 </style>

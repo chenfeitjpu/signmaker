@@ -1,50 +1,62 @@
 <template>
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-left">
-                <img class="logo" src="../assets/logo_signmaker.png" alt="logo" />
-            </div>
-            <div class="footer-right">
-                <div class="footer-right-item">
-                    <span class="footer-right-item-title">Products</span>
-                    <div class="footer-right-item-content">
-                        <a href="">Draw Signature</a>
-                        <a href="">Type Signature</a>
-                        <a href="">Logo Signature</a>
-                        <a href="">Handwritten Signature</a>
-                    </div>
+            <div class="footer-nav">
+                <div class="footer-left">
+                    <img class="logo" src="../assets/logo_signmaker.png" alt="logo" />
                 </div>
-                <div class="footer-right-item">
-                    <span class="footer-right-item-title">Contact Us</span>
-                    <div class="footer-right-item-content">
-                        <a href="">Blog</a>
-                        <a href="">Pricing</a>
-                        <a href="">FAQ</a>
+                <div class="footer-right">
+                    <div class="footer-right-item">
+                        <span class="footer-right-item-title">Products</span>
+                        <div class="footer-right-item-content">
+                            <a v-for="product in products" :key="product.name" :href="product.link" target="_blank">{{ product.name }}</a>
+                        </div>
+                    </div>
+                    <div class="footer-right-item">
+                        <span class="footer-right-item-title">Contact Us</span>
+                        <div class="footer-right-item-content">
+                            <a v-for="about in abouts" :key="about.name" :href="about.link" target="_blank">{{ about.name }}</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="site-statement">
-            <p>Copyright 2024 SignMaker. All rights reserved. </p>
+            <div class="site-statement">
+                <p>Copyright 2024 SignMaker. All rights reserved. </p>
+            </div>
         </div>
     </footer>
 </template>
 
 <script setup>
-// Add any necessary script here
-</script>
+import { ref } from 'vue';
 
+const products = ref([
+    { name: 'Draw Signature', link: 'https://signmaker.io/' },
+    { name: 'Type Signature', link: 'https://signmaker.io/type-signature' },
+    { name: 'Logo Signature', link: 'https://signmaker.io/ai-logo-signature' },
+    { name: 'Handwritten Signature', link: 'https://signmaker.io/ai-handwritten-signature-generator' }
+]);
+
+const abouts = ref([
+    { name: 'Privacy and Cookies Policy', link: 'https://signmaker.io/privacy' },
+    { name: 'Join Discord', link: 'https://discord.gg/vpcd4wk6' },
+    { name: 'Email: apersonlized@gmail.com', link: 'mailto:apersonlized@gmail.com' }
+]);
+</script>
 <style scoped>
 .footer {
-    border-top: 1px solid #f1f2f3;
     padding: 20px 0;
 }
 .footer-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.footer-nav {
     display: flex;
     margin-bottom: 40px;
 }
 .footer-left {
-    margin-left: 100px;
     width: 200px;
 }
 .footer-left .logo {
@@ -61,7 +73,7 @@
 }
 .footer-right-item-title {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .footer-right-item-content {
     display: flex;
@@ -70,6 +82,7 @@
 .footer-right-item a {
     color: #777777;
     text-decoration: none;
+    font-size: 18px;
 }
 .site-statement {
     border-top: 1px solid rgba(117, 117, 117, 0.09);

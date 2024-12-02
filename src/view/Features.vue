@@ -2,7 +2,7 @@
     <section class="features">
         <div class="feature-container">
             <div class="feature-header">
-                <h2>Features Of Handwritten Generation</h2>
+                <h2>Features Of Handwritten Signature Generator</h2>
             </div>
             <div class="feature-list">
                 <div class="feature-item" v-for="(feature, index) in features" :key="index">
@@ -16,35 +16,38 @@
 <script setup> 
 import { ref } from 'vue';
 const features = ref([
-    { title: 'Instant Text to Music Conversion', description: 'Turn your text into music in seconds with our AI-powered generator.' },
-    { title: 'Effortless Creativity', description: 'No musical experience needed, our tool creates unique melodies from your words automatically.' },
-    { title: 'Free and Accessible', description: 'Enjoy full access to all features for free, making music creation easy and affordable.' }
+    { title: 'AI Powered', description: 'Turn your text into realistic handwriting in seconds with our AI-powered generator.' },
+    { title: 'Unique And Creative', description: 'Our generator will create a creative, unique signature based on your name' },
+    { title: 'Free and Accessible', description: "It's free to use, and you can download and access your handwritten signature anytime, anywhere." }
 ]);     
 </script>
 <style scoped>
 .features {
-    padding: 40px 0px;
-    background-color: #f5fbff;
+    padding: 30px 0px;
 }
 .feature-container {
-    max-width: 720px;
+    width: 100%;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 0 10px;
 }
-.feature-header{
+.feature-header {
     padding: 15px;
+    text-align: center;
 }
 .feature-list{
     display: flex;
     justify-content: space-between;
 }
 .feature-item{
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+    flex: 1;
+    border: 1px solid #cecece;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    background-color: #ffffff;
     margin: 10px;
     padding: 15px;
+    background-color:  rgba(230, 241, 255, 0.3); 
+}
+.feature-title{
+    margin-bottom: 10px;
 }
 </style>
