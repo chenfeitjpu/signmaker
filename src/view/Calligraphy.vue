@@ -2,8 +2,8 @@
     <section class="handwritten">
         <div class="handwritten-container">
             <div class="handwritten-header">
-                <h2 class="title">AI Handwritten Signature Generator</h2>
-                <p class="description">AI handwritten signature generator convert your signature into realistic handwriting.It's a free printable handwritten signature generator.</p>
+                <h2 class="title">AI Calligraphy Signature Generator</h2>
+                <p class="description">AI calligraphy signature generator convert your signature into realistic handwriting.It's a free printable handwritten signature generator.</p>
             </div>
             <div class="handwritten-content">
                 <div class="handwritten-panel">
@@ -44,7 +44,7 @@ import { onMounted } from 'vue';
 
 onMounted(() => {
     const script = document.createElement('script');
-    script.src = import.meta.env.BASE_URL + 'js/handwritten.js';
+    script.src =  import.meta.env.BASE_URL +'js/calligraphy.js';
     script.async = true;
     document.body.appendChild(script);
 });
